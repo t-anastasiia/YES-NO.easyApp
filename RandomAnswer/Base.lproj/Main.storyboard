@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RandomAnswer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Space" translatesAutoresizingMaskIntoConstraints="NO" id="fSw-hw-t4M">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OV1-VD-3WE">
+                                <rect key="frame" x="207" y="396.5" width="0.0" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="6Fu-Kd-7ob"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="86"/>
+                                <color key="textColor" red="0.4832922892541614" green="0.57647061349999995" blue="0.53999817141021289" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDk-Kw-OjK">
+                                <rect key="frame" x="151" y="549.5" width="112.5" height="35"/>
+                                <color key="backgroundColor" red="0.94117647410000005" green="0.74901962280000001" blue="0.78039217000000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.74117648599999997" green="0.34901961679999999" blue="0.38431376220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Get answer">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="answerButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LAr-cv-WdM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OV1-VD-3WE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4co-Ix-vnp"/>
+                            <constraint firstAttribute="bottom" secondItem="fSw-hw-t4M" secondAttribute="bottom" id="IjL-fg-P4u"/>
+                            <constraint firstItem="fSw-hw-t4M" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="OLr-cD-m8D"/>
+                            <constraint firstItem="fSw-hw-t4M" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aCx-2O-2t1"/>
+                            <constraint firstItem="fSw-hw-t4M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="loy-2c-CAV"/>
+                            <constraint firstItem="xDk-Kw-OjK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ruU-sA-upr"/>
+                            <constraint firstItem="OV1-VD-3WE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x03-zL-YYS"/>
+                            <constraint firstItem="xDk-Kw-OjK" firstAttribute="top" secondItem="OV1-VD-3WE" secondAttribute="bottom" constant="50" id="yLv-sY-2Ep"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerButton" destination="xDk-Kw-OjK" id="Bjw-2i-1fw"/>
+                        <outlet property="answerLabel" destination="OV1-VD-3WE" id="v3g-V8-Kql"/>
+                        <outlet property="backgroundImage" destination="fSw-hw-t4M" id="gKY-sg-Zob"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111.16071428571428" y="-2.8985507246376816"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Space" width="333.33334350585938" height="472.33334350585938"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
